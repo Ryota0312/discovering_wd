@@ -1,0 +1,5 @@
+settings.yml
+env
+log.pickle
+__pycache__/
+wd_answer.csv
