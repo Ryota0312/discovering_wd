@@ -39,8 +39,7 @@ class WDEstimator:
             # 履歴数が少ないタイムラインを無視
             #if interval[i] - left < 5: continue
             # Unmanaged なタイムラインを無視
-            if self.__is_unmanaged(left, int(interval[i])):
-                continue
+            if self.__is_unmanaged(left, int(interval[i])): continue
             # タイムラインの最上層共通フォルダをWDとして推定
             est_wd = self.__representative_dir(left, int(interval[i]))
             wds = np.append(wds, est_wd)

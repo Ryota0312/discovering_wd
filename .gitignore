@@ -3,3 +3,4 @@ env
 log.pickle
 __pycache__/
 wd_answer.csv
+experiment/
