@@ -14,8 +14,8 @@ class WDEstimator:
         self.move_w = move_weight
         self.move_w_const_p = len(move_weight)
         self.move_th = move_threshold
-        print("   Weight:", self.move_w) # 記録用
-        print("Threshold:", self.move_th)# 記録用
+#        print("   Weight:", self.move_w) # 記録用
+#        print("Threshold:", self.move_th)# 記録用
         self.timelines = {}
         # WD 推定
         self.workingdir = self.estimate_wd()
@@ -24,13 +24,13 @@ class WDEstimator:
         wds = np.array([])
         interval = np.array([])
         tl = self.__split_with_upper_layer()
-        print("split_with_upper_layer:" + str(len(tl)-1) + "intervals")
+#        print("split_with_upper_layer:" + str(len(tl)-1) + "intervals")
         for i in range(1, len(tl)):
             left = tl[i-1]
             #if i != 1: left+=1
             interval = np.append(interval, self.__split_with_cross_mtime(left, tl[i]))
         interval = np.unique(interval)
-        print("split_with_cross_mtime:" + str(len(interval)-1) + "intervals")
+#        print("split_with_cross_mtime:" + str(len(interval)-1) + "intervals")
         # left = interval[0]からスタート
         # left ~ left+1
         for i in range(1, len(interval)):
